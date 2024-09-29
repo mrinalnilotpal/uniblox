@@ -1,0 +1,20 @@
+[
+    {
+        "_id": "f271b231-38cc-41d1-87d4-744fda957538",
+        "company": "Tata Care",
+        "product": "health insurance",
+        "price": "2000"
+    },
+    {
+        "_id": "fdc7465a-3a21-49dd-bd78-26b3c8dc5ecc",
+        "company": "LIC",
+        "product": "health insurance",
+        "price": "200"
+    },
+    {
+        "_id": "81de81d7-6190-4a67-adf7-f4cfaa0ded0e",
+        "company": "LIC",
+        "product": "Life insurance",
+        "price": "200"
+    }
+]

@@ -39,7 +39,7 @@ class MyFlask(Flask):
             "/api/v1/cart/add",
             endpoint="add_to_cart",
             resource_class_kwargs={
-                "discount_percentage": self.DISCOUNT_PERCENTAGE
+                "signup_db": self.SIGNUP_DB,
             },
         )
 
@@ -65,7 +65,10 @@ class MyFlask(Flask):
         api.add_resource(
             AdminStatsAPI,
             "/api/v1/admin/stats",
-            endpoint="admin_stats"
+            endpoint="admin_stats",
+            resource_class_kwargs={
+                "product_db": self.PRODUCT_DB,
+            },
         )
 
         api.add_resource(
@@ -89,7 +92,10 @@ class MyFlask(Flask):
         api.add_resource(
             AddProductAPI,
             "/api/v1/product/add",
-            endpoint="add_product"
+            endpoint="add_product",
+            resource_class_kwargs={
+                "product_db": self.PRODUCT_DB,
+            },
         )
 
 

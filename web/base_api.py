@@ -19,7 +19,7 @@ class BaseAPI(Resource):
         return jsonify({"message": message}), status
 
 
-# Decorator to require admin privileges
+
 def admin_required(func):
     @wraps(func)
     def wrapper(*args, **kwargs):

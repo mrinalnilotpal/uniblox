@@ -4,6 +4,27 @@
         "name": "Nilotpal",
         "email": "nilotpal.avanti@gmail.com",
         "password": "loermepsom",
+        "phone": "+916202195861",
+        "cart": [
+            "f271b231-38cc-41d1-87d4-744fda957538",
+            "fdc7465a-3a21-49dd-bd78-26b3c8dc5ecc"
+        ]
+    },
+    {
+        "_id": "d534e2b5-501c-452f-8c58-c4beb7551b58",
+        "name": "Surya",
+        "email": "Surya@gmail.com",
+        "password": "loermepsom",
+        "phone": "+916202195861",
+        "cart": [
+            "fdc7465a-3a21-49dd-bd78-26b3c8dc5ecc"
+        ]
+    },
+    {
+        "_id": "833b21ce-4202-45e1-b8ac-2527c947094b",
+        "name": "vikram",
+        "email": "vikram@gmail.com",
+        "password": "loermepsom",
         "phone": "+916202195861"
     }
 ]
