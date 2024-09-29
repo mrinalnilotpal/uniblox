@@ -5,15 +5,18 @@ from flask_cors import CORS
 from flask_restful import Api
 from flask.helpers import get_root_path
 
-from web import (
-    AddToCartAPI,
-    CheckoutAPI,
-    GenerateDiscountAPI,
-    AdminStatsAPI,
-    LoginAPI,
-    SignupAPI,
-    AddProductAPI,
-)
+import sys
+PATH=sys.path[0]
+sys.path.append(PATH)
+
+from web.addtocart import AddToCartAPI
+from web.add_product_to_universe import AddProductAPI
+from web.generate_discount import GenerateDiscountAPI
+from web.login import LoginAPI
+from web.signup import SignupAPI
+from web.checkout import CheckoutAPI
+from web.admin_stats import AdminStatsAPI
+
 
 class MyFlask(Flask):
     def __init__(self, *args, **kwargs):
@@ -26,7 +29,8 @@ class MyFlask(Flask):
 
             self.DISCOUNT_PERCENTAGE = config_data["DISCOUNT"]["percentage"]
             self.NTH_ORDER = config_data["DISCOUNT"]["nth_order"]
-
+            self.SIGNUP_DB = config_data["SIGNUP_DB"]
+            self.PRODUCT_DB = config_data["PRODUCT_DB"]
     def add_api(self):
         api = Api(self, catch_all_404s=True)
 
@@ -67,13 +71,19 @@ class MyFlask(Flask):
         api.add_resource(
             LoginAPI,
             "/api/v1/auth/login",
-            endpoint="login"
+            endpoint="login",
+            resource_class_kwargs={
+                "signup_db": self.SIGNUP_DB,
+            },
         )
 
         api.add_resource(
             SignupAPI,
             "/api/v1/auth/signup",
-            endpoint="signup"
+            endpoint="signup",
+            resource_class_kwargs={
+                "signup_db": self.SIGNUP_DB,
+            },
         )
 
         api.add_resource(
@@ -87,7 +97,9 @@ def create_app(config_file):
     app = MyFlask(__name__)
     CORS(app)
     ROOT = get_root_path("app")
+    print(ROOT)
     LOCAL_CONFIG = os.path.join(ROOT, config_file)
+    print(LOCAL_CONFIG)
     app.from_local_config(LOCAL_CONFIG)
     app.add_api()
     return app
