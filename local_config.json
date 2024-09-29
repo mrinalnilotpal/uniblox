@@ -1,0 +1,10 @@
+{
+    "SIGNUP_DB": "db/users.json",
+    "PRODUCT_DB": "db/products.json",
+    "ORDER_DB":"db/orders.json",
+    "DISCOUNT": {
+        "percentage": 10,
+        "nth_order": 3
+    },
+    "DEBUG": true
+}
