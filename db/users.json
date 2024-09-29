@@ -16,9 +16,16 @@
         "password": "loermepsom",
         "phone": "+916202195861",
         "cart": [],
-        "stored_discount": "DISCOUNT_10_0",
+        "stored_discount": "DISCOUNT_10_6",
         "order_count": 1,
-        "order_ids": []
+        "order_ids": [
+            "ef0e9b6b-2f50-4a86-a16e-063f30145c6c",
+            "f3e439d0-78e1-4594-87f6-1900173a75c0",
+            "c3ab6981-eeac-4f47-8ee7-ac7868a9f73f",
+            "a04b467b-24f4-4e94-a661-c76b4e33d791",
+            "1cd73c3a-f4e9-4783-b7fc-3ad341db96e6",
+            "2d837b09-81a0-4abc-b0ed-b24d2fd229b3"
+        ]
     },
     {
         "_id": "833b21ce-4202-45e1-b8ac-2527c947094b",

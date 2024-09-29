@@ -79,5 +79,75 @@
             null
         ],
         "total_discount_amount": 25.3
+    },
+    {
+        "order_id": "ef0e9b6b-2f50-4a86-a16e-063f30145c6c",
+        "user_id": "d534e2b5-501c-452f-8c58-c4beb7551b58",
+        "items_purchased": 1,
+        "items": [
+            "ca651d39-1a62-4ef5-b787-eb8029cbd754"
+        ],
+        "total_purchase_amount": 253,
+        "discount_codes": [],
+        "total_discount_amount": 0
+    },
+    {
+        "order_id": "f3e439d0-78e1-4594-87f6-1900173a75c0",
+        "user_id": "d534e2b5-501c-452f-8c58-c4beb7551b58",
+        "items_purchased": 1,
+        "items": [
+            "ca651d39-1a62-4ef5-b787-eb8029cbd754"
+        ],
+        "total_purchase_amount": 253,
+        "discount_codes": [],
+        "total_discount_amount": 0
+    },
+    {
+        "order_id": "c3ab6981-eeac-4f47-8ee7-ac7868a9f73f",
+        "user_id": "d534e2b5-501c-452f-8c58-c4beb7551b58",
+        "items_purchased": 1,
+        "items": [
+            "ca651d39-1a62-4ef5-b787-eb8029cbd754"
+        ],
+        "total_purchase_amount": 253,
+        "discount_codes": [
+            null
+        ],
+        "total_discount_amount": 25.3
+    },
+    {
+        "order_id": "a04b467b-24f4-4e94-a661-c76b4e33d791",
+        "user_id": "d534e2b5-501c-452f-8c58-c4beb7551b58",
+        "items_purchased": 1,
+        "items": [
+            "ca651d39-1a62-4ef5-b787-eb8029cbd754"
+        ],
+        "total_purchase_amount": 253,
+        "discount_codes": [],
+        "total_discount_amount": 0
+    },
+    {
+        "order_id": "1cd73c3a-f4e9-4783-b7fc-3ad341db96e6",
+        "user_id": "d534e2b5-501c-452f-8c58-c4beb7551b58",
+        "items_purchased": 1,
+        "items": [
+            "ca651d39-1a62-4ef5-b787-eb8029cbd754"
+        ],
+        "total_purchase_amount": 253,
+        "discount_codes": [],
+        "total_discount_amount": 0
+    },
+    {
+        "order_id": "2d837b09-81a0-4abc-b0ed-b24d2fd229b3",
+        "user_id": "d534e2b5-501c-452f-8c58-c4beb7551b58",
+        "items_purchased": 1,
+        "items": [
+            "ca651d39-1a62-4ef5-b787-eb8029cbd754"
+        ],
+        "total_purchase_amount": 253,
+        "discount_codes": [
+            "DISCOUNT_10_6"
+        ],
+        "total_discount_amount": 0
     }
 ]

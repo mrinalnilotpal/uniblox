@@ -11,7 +11,7 @@ sys.path.append(PATH)
 
 from web.addtocart import AddToCartAPI
 from web.add_product_to_universe import AddProductAPI
-from web.generate_discount import GenerateDiscountAPI
+from web.analytics import GenerateAnalysisAPI
 from web.login import LoginAPI
 from web.signup import SignupAPI
 from web.checkout import CheckoutAPI
@@ -58,12 +58,13 @@ class MyFlask(Flask):
         )
 
         api.add_resource(
-            GenerateDiscountAPI,
-            "/api/v1/admin/discount",
-            endpoint="generate_discount",
+            GenerateAnalysisAPI,
+            "/api/v1/admin/analysis",
+            endpoint="analysis",
             resource_class_kwargs={
-                "nth_order": self.NTH_ORDER,
-                "discount_percentage": self.DISCOUNT_PERCENTAGE
+                "product_db":self.PRODUCT_DB,
+                "signup_db":self.SIGNUP_DB,
+                "orders_db" : self.ORDER_DB
             },
         )
 
