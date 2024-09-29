@@ -33,9 +33,7 @@ class GenerateAnalysisAPI(BaseAPI):
         ).reset_index()
 
         result = pd.merge(user_summary, df_signup[['name', 'email', '_id']], left_on='user_id', right_on='_id')
-
         result = result[['name', 'email', 'total_items_purchased', 'total_purchase_amount', 'discount_codes', 'total_discount_amount']]
-
         analysis_json = result.to_dict(orient='records')
 
         return {'data': analysis_json}, 200
