@@ -31,6 +31,8 @@ class MyFlask(Flask):
             self.NTH_ORDER = config_data["DISCOUNT"]["nth_order"]
             self.SIGNUP_DB = config_data["SIGNUP_DB"]
             self.PRODUCT_DB = config_data["PRODUCT_DB"]
+            self.ORDER_DB = config_data["ORDER_DB"]
+
     def add_api(self):
         api = Api(self, catch_all_404s=True)
 
@@ -48,7 +50,10 @@ class MyFlask(Flask):
             "/api/v1/checkout",
             endpoint="checkout",
             resource_class_kwargs={
-                "nth_order": self.NTH_ORDER
+                "nth_order": self.NTH_ORDER,
+                "product_db":self.PRODUCT_DB,
+                "signup_db":self.SIGNUP_DB,
+                "orders_db" : self.ORDER_DB
             },
         )
 

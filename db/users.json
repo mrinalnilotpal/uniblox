@@ -5,10 +5,9 @@
         "email": "nilotpal.avanti@gmail.com",
         "password": "loermepsom",
         "phone": "+916202195861",
-        "cart": [
-            "f271b231-38cc-41d1-87d4-744fda957538",
-            "fdc7465a-3a21-49dd-bd78-26b3c8dc5ecc"
-        ]
+        "cart": [],
+        "stored_discount": "DISCOUNT_10_0",
+        "order_count": 1
     },
     {
         "_id": "d534e2b5-501c-452f-8c58-c4beb7551b58",
@@ -16,15 +15,27 @@
         "email": "Surya@gmail.com",
         "password": "loermepsom",
         "phone": "+916202195861",
-        "cart": [
-            "fdc7465a-3a21-49dd-bd78-26b3c8dc5ecc"
-        ]
+        "cart": [],
+        "stored_discount": "DISCOUNT_10_0",
+        "order_count": 1,
+        "order_ids": []
     },
     {
         "_id": "833b21ce-4202-45e1-b8ac-2527c947094b",
         "name": "vikram",
         "email": "vikram@gmail.com",
         "password": "loermepsom",
-        "phone": "+916202195861"
+        "phone": "+916202195861",
+        "cart": [],
+        "order_ids": [
+            "5011ac3d-adee-4895-9061-06c7b35b1a10",
+            "e12f0461-0b7e-4d0b-b37b-00722372968d",
+            "eb1339d3-37f5-452e-8370-2389e6e42afd",
+            "61135df8-a3e4-4358-bb75-93e2d1f8f856",
+            "dc9b904c-0b69-4893-8081-56ed9533280e",
+            "681303c0-df57-49c1-a40a-bb2ab246cfb4",
+            "42bb2942-507a-4384-bd5f-a61f38f0e3cb"
+        ],
+        "stored_discount": null
     }
 ]

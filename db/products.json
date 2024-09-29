@@ -2,19 +2,37 @@
     {
         "_id": "f271b231-38cc-41d1-87d4-744fda957538",
         "company": "Tata Care",
-        "product": "health insurance",
-        "price": "2000"
+        "product": "healh insurance",
+        "price": 204300
     },
     {
         "_id": "fdc7465a-3a21-49dd-bd78-26b3c8dc5ecc",
         "company": "LIC",
         "product": "health insurance",
-        "price": "200"
+        "price": 2032
     },
     {
         "_id": "81de81d7-6190-4a67-adf7-f4cfaa0ded0e",
         "company": "LIC",
         "product": "Life insurance",
-        "price": "200"
+        "price": 2006
+    },
+    {
+        "_id": "ca651d39-1a62-4ef5-b787-eb8029cbd754",
+        "company": "Piramal Group",
+        "product": "Travel Insurance",
+        "price": 253
+    },
+    {
+        "_id": "750a28bb-1748-4671-bf6f-5e9acc50d6eb",
+        "company": "Piramal Group",
+        "product": "Car Insurance",
+        "price": 200
+    },
+    {
+        "_id": "f9a6d99a-e222-4191-9cf6-0fe2f4650d76",
+        "company": "Sri Ram Insurance",
+        "product": "Travel Insurance",
+        "price": 200
     }
 ]
