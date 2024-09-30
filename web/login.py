@@ -7,9 +7,11 @@ class LoginAPI(BaseAPI):
     """API to handle user login."""
 
     def __init__(self, signup_db):
+        """Initialize the LoginAPI with the signup database path."""
         self.signup_db = signup_db
 
     def post(self):
+        """Handle POST request for user login."""
         payload = self.get_payload()
         email = payload.get('email')
         password = payload.get('password')
@@ -26,3 +28,4 @@ class LoginAPI(BaseAPI):
             return {"message": "Incorrect password"}, 401
 
         return {"message": "Login successful"}, 200
+

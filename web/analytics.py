@@ -3,14 +3,15 @@ import json
 import pandas as pd
 from .base_api import BaseAPI
 
-
 class GenerateAnalysisAPI(BaseAPI):
     def __init__(self, product_db, signup_db, orders_db):
+        """Initialize the GenerateAnalysisAPI with product, signup, and orders databases."""
         self.product_db = product_db
         self.signup_db = signup_db
         self.orders_db = orders_db
 
     def get(self):
+        """Handle GET request to generate analysis based on signup and order data."""
         with open(self.signup_db, 'r') as f:
             signup_data = json.load(f)
         with open(self.orders_db, 'r') as f:

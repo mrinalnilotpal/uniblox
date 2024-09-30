@@ -15,15 +15,20 @@ from web.analytics import GenerateAnalysisAPI
 from web.login import LoginAPI
 from web.signup import SignupAPI
 from web.checkout import CheckoutAPI
-from web.admin_stats import AdminStatsAPI
 
 
 class MyFlask(Flask):
     def __init__(self, *args, **kwargs):
+        """
+        Custom Flask class to initialize the application and store global variables.
+        """
         super().__init__(*args, **kwargs)
         self.global_variables = {}
 
     def from_local_config(self, local_config):
+        """
+        Load the configuration data from a JSON file and set necessary parameters.
+        """
         with open(local_config) as json_file:
             config_data = json.load(json_file)
 
@@ -34,6 +39,9 @@ class MyFlask(Flask):
             self.ORDER_DB = config_data["ORDER_DB"]
 
     def add_api(self):
+        """
+        Add API routes to the Flask application and bind them to specific endpoints.
+        """
         api = Api(self, catch_all_404s=True)
 
         api.add_resource(
@@ -69,15 +77,6 @@ class MyFlask(Flask):
         )
 
         api.add_resource(
-            AdminStatsAPI,
-            "/api/v1/admin/stats",
-            endpoint="admin_stats",
-            resource_class_kwargs={
-                "product_db": self.PRODUCT_DB,
-            },
-        )
-
-        api.add_resource(
             LoginAPI,
             "/api/v1/auth/login",
             endpoint="login",
@@ -106,6 +105,10 @@ class MyFlask(Flask):
 
 
 def create_app(config_file):
+    """
+    Factory function to create a Flask application instance.
+    Loads configurations from a JSON file and adds API routes.
+    """
     app = MyFlask(__name__)
     CORS(app)
     ROOT = get_root_path("app")
@@ -121,6 +124,9 @@ app = create_app(config_file="local_config.json")
 
 
 if __name__ == "__main__":
+    """
+    Main entry point to run the Flask application in debug mode.
+    """
     app.run(
         debug=True
     )

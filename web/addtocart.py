@@ -1,4 +1,3 @@
-
 import os
 import json
 from .base_api import BaseAPI
@@ -7,6 +6,7 @@ class AddToCartAPI(BaseAPI):
     """API to add items to cart."""
 
     def __init__(self, signup_db):
+        """Initialize the AddToCartAPI with the signup database path."""
         self.signup_db = signup_db
 
         if not os.path.exists(self.signup_db):
@@ -14,6 +14,7 @@ class AddToCartAPI(BaseAPI):
                 json.dump([], db_file)  
 
     def post(self):
+        """Handle POST request to add a product to a user's cart."""
         payload = self.get_payload()
         client_id = payload.get('client_id')
         product_id = payload.get('product_id')

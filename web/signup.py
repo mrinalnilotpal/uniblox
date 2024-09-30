@@ -7,9 +7,11 @@ class SignupAPI(BaseAPI):
     """API to handle user signup."""
     
     def __init__(self, signup_db):
+        """Initialize the SignupAPI with the signup database path."""
         self.signup_db = signup_db
 
     def post(self):
+        """Handle POST request for user signup."""
         payload = self.get_payload()
         email = payload.get('email')
 
@@ -28,4 +30,5 @@ class SignupAPI(BaseAPI):
             json.dump(users, db_file, indent=4)
 
         return {"message": "User signed up successfully", "user": new_user["email"]}, 201
+
 
